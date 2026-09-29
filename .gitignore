@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Project data
+data/raw/
+
+# Model checkpoints
+*.pt
+*.pth
+
+# Kaggle credentials
+kaggle.json
+
+# CatBoost logs
+catboost_info/
