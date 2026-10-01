@@ -1,0 +1,18 @@
+paths:
+  train: "data/raw/train.csv"
+  test: "data/raw/test.csv"
+  submission: "artifacts/submissions/catboost_submission.csv"
+
+target:
+  name: "SalePrice"
+  log_transform: true
+
+model:
+  name: "catboost"
+  params:
+    iterations: 1000
+    depth: 5
+    learning_rate: 0.03
+    l2_leaf_reg: 3
+    random_seed: 42
+    verbose: 0
