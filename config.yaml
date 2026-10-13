@@ -72,7 +72,6 @@ experiments:
         max_depth: 3
         learning_rate: 0.03
         min_child_samples: 30
-        subsample: 0.8
         colsample_bytree: 0.7
         random_state: 42
         verbose: -1

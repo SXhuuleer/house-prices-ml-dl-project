@@ -22,6 +22,7 @@ from src.ensembles import (
     build_stacking_ensemble
 )
 from src.reporting import create_all_models_report
+from src.submission import save_submission
 
 def main():
     with open("config.yaml", "r", encoding="utf-8") as file:
@@ -710,8 +711,16 @@ def main():
         "SalePrice": predictions
     })
 
+    submission_path = Path(config["paths"]["submission"])
+
+    # Создаём папку автоматически, если её ещё нет
+    submission_path.parent.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
     submission.to_csv(
-        config["paths"]["submission"],
+        submission_path,
         index=False
     )
 
